@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grocery List-->
+        <!--Xplore-->
         <scene sceneID="Go5-DY-Fsd">
             <objects>
                 <viewController id="xDo-Zd-41J" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWr-PR-x2Y"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Grocery List" id="HUF-5I-fYb"/>
+                    <tabBarItem key="tabBarItem" title="Xplore" id="HUF-5I-fYb"/>
                     <connections>
                         <segue destination="UhJ-lE-kJX" kind="show" id="2RP-5a-bDi">
                             <nil key="action"/>
@@ -240,7 +240,7 @@
             </objects>
             <point key="canvasLocation" x="1385" y="-278"/>
         </scene>
-        <!--Xplore-->
+        <!--Grocery List-->
         <scene sceneID="DOw-lK-Tfq">
             <objects>
                 <viewController id="KJf-qr-oJx" sceneMemberID="viewController">
@@ -250,7 +250,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="eh6-DB-Ejq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Xplore" id="7L1-nf-aL5"/>
+                    <tabBarItem key="tabBarItem" title="Grocery List" id="7L1-nf-aL5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3f-xP-uUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,10 +282,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KJf-qr-oJx" kind="relationship" relationship="viewControllers" id="vcu-OX-CoP"/>
+                        <segue destination="xDo-Zd-41J" kind="relationship" relationship="viewControllers" id="Djl-9t-bnH"/>
                         <segue destination="cKq-HC-qPs" kind="relationship" relationship="viewControllers" id="0Vi-Gf-y47"/>
                         <segue destination="0tE-EA-d8m" kind="relationship" relationship="viewControllers" id="ISK-A3-QVF"/>
-                        <segue destination="xDo-Zd-41J" kind="relationship" relationship="viewControllers" id="Djl-9t-bnH"/>
+                        <segue destination="KJf-qr-oJx" kind="relationship" relationship="viewControllers" id="vcu-OX-CoP"/>
                         <segue destination="Efu-vQ-a2F" kind="relationship" relationship="viewControllers" id="j9T-t7-e7X"/>
                     </connections>
                 </tabBarController>
