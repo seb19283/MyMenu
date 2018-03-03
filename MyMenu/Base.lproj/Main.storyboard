@@ -24,9 +24,6 @@
                                     <constraint firstAttribute="height" constant="75" id="sjE-En-aWb"/>
                                 </constraints>
                                 <state key="normal" title="Generate Recipe"/>
-                                <connections>
-                                    <segue destination="6qn-PP-LPE" kind="presentation" id="47E-L2-8mO"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPS-QT-NnZ">
                                 <rect key="frame" x="0.0" y="95" width="375" height="523"/>
@@ -85,9 +82,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Xplore" id="HUF-5I-fYb"/>
                     <connections>
-                        <segue destination="UhJ-lE-kJX" kind="show" id="2RP-5a-bDi">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="UhJ-lE-kJX" kind="show" id="pgV-ur-5mD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66l-fh-4UY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gi-Ic-T4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.60000000000002" y="1396.5517241379312"/>
+            <point key="canvasLocation" x="434" y="1397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9tC-fr-AUw">
@@ -375,50 +370,52 @@
         <!--Ingredients-->
         <scene sceneID="5I8-Ki-svw">
             <objects>
-                <viewController id="0tE-EA-d8m" sceneMemberID="viewController">
+                <viewController id="0tE-EA-d8m" customClass="IngredientsViewController" customModule="MyMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fKw-jA-wNW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-of-c8Z">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="205" id="4WO-4A-ZNc">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="205"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4WO-4A-ZNc" id="Tkk-Ze-rxI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="204.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category of Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYk-Y7-Qkz">
-                                                    <rect key="frame" x="15" y="11" width="134" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vxr-ix-dIc">
-                                                    <rect key="frame" x="36" y="40" width="324" height="154"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </tableView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-Ql-RIo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="aVF-3f-DJY">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cxJ-Zl-Dkl">
+                                            <connections>
+                                                <action selector="cancelButtonClicked:" destination="0tE-EA-d8m" id="FyN-Qd-zJu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="8Rd-jQ-FkX">
+                                            <connections>
+                                                <action selector="editButtonClicked:" destination="0tE-EA-d8m" id="fJ0-2m-K3r"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RhU-72-JfZ" firstAttribute="bottom" secondItem="fsy-of-c8Z" secondAttribute="bottom" id="4W5-HE-cpL"/>
+                            <constraint firstItem="fsy-of-c8Z" firstAttribute="top" secondItem="oeo-Ql-RIo" secondAttribute="bottom" id="CGD-0Q-fpN"/>
                             <constraint firstItem="RhU-72-JfZ" firstAttribute="trailing" secondItem="fsy-of-c8Z" secondAttribute="trailing" id="DZH-SQ-MKv"/>
-                            <constraint firstItem="fsy-of-c8Z" firstAttribute="top" secondItem="RhU-72-JfZ" secondAttribute="top" id="EIj-ms-w38"/>
+                            <constraint firstItem="oeo-Ql-RIo" firstAttribute="top" secondItem="RhU-72-JfZ" secondAttribute="top" id="S2e-hH-Kj0"/>
+                            <constraint firstItem="oeo-Ql-RIo" firstAttribute="trailing" secondItem="RhU-72-JfZ" secondAttribute="trailing" id="eH5-YM-2t0"/>
                             <constraint firstItem="fsy-of-c8Z" firstAttribute="leading" secondItem="RhU-72-JfZ" secondAttribute="leading" id="s1L-3N-3gd"/>
+                            <constraint firstItem="oeo-Ql-RIo" firstAttribute="leading" secondItem="RhU-72-JfZ" secondAttribute="leading" id="ugw-XO-u8O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RhU-72-JfZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" id="Rym-iC-iag"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="cxJ-Zl-Dkl" id="xwe-RT-dUS"/>
+                        <outlet property="editButton" destination="8Rd-jQ-FkX" id="PgR-jh-GqT"/>
+                        <outlet property="navigationBar" destination="aVF-3f-DJY" id="jLo-7k-AxT"/>
+                        <outlet property="tableView" destination="fsy-of-c8Z" id="BhO-Wg-0MY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0C-0B-Hy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -487,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbF-B7-wVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2519" y="447"/>
+            <point key="canvasLocation" x="-2462" y="1285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7KW-2X-3Ti">

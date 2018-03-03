@@ -17,6 +17,7 @@
 		A8A8BB312034A57C009ACDC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */; };
 		A8A8BB3C2034A57C009ACDC9 /* MyMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB3B2034A57C009ACDC9 /* MyMenuTests.swift */; };
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
+		A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A8A8BB422034A57C009ACDC9 /* MyMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuUITests.swift; sourceTree = "<group>"; };
 		A8A8BB482034A57C009ACDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		AF7C570FF968731200EA374C /* Pods-MyMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.release.xcconfig"; sourceTree = "<group>"; };
 		B08FE270AC5BBAA5088DCC17 /* Pods-MyMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D4BEF18C3E6CF613C8CE84EE /* Pods_MyMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A89E61CD2048BF0F004AD15E /* XPlore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XPlore;
+			sourceTree = "<group>";
+		};
 		A8A8BB1A2034A57C009ACDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +142,8 @@
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
 				A8A8BB322034A57C009ACDC9 /* Info.plist */,
 				A8962C19203D16D2006B57FE /* GoogleService-Info.plist */,
+				A89E61CD2048BF0F004AD15E /* XPlore */,
+				A8ADBBBA2044C8A500F3873B /* Ingredients */,
 			);
 			path = MyMenu;
 			sourceTree = "<group>";
@@ -153,6 +164,14 @@
 				A8A8BB482034A57C009ACDC9 /* Info.plist */,
 			);
 			path = MyMenuUITests;
+			sourceTree = "<group>";
+		};
+		A8ADBBBA2044C8A500F3873B /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */,
+			);
+			path = Ingredients;
 			sourceTree = "<group>";
 		};
 		DD0AB02F98E82EF50BD5172E /* Frameworks */ = {
@@ -475,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
+				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
