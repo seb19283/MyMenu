@@ -10,6 +10,7 @@
 		4369F08BC4986F6474EA246F /* Pods_MyMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A5D94CB88BC901ED53D799 /* Pods_MyMenuUITests.framework */; };
 		7240D473B5A8648A4DBB3FC5 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD4A9446A19D9DD48334ECD /* Pods_MyMenu.framework */; };
 		9FAC95C37C37F77564D64881 /* Pods_MyMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BEF18C3E6CF613C8CE84EE /* Pods_MyMenuTests.framework */; };
+		A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */; };
 		A8962C1A203D16D2006B57FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8962C19203D16D2006B57FE /* GoogleService-Info.plist */; };
 		A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */; };
 		A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		67A5D94CB88BC901ED53D799 /* Pods_MyMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EB32C883D21D21BA424085 /* Pods-MyMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD4A9446A19D9DD48334ECD /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
 		A8962C19203D16D2006B57FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8A8BB232034A57C009ACDC9 /* MyMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A802CF11204B648C00B93EC5 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		A89E61CD2048BF0F004AD15E /* XPlore */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
 				A8A8BB322034A57C009ACDC9 /* Info.plist */,
 				A8962C19203D16D2006B57FE /* GoogleService-Info.plist */,
+				A802CF11204B648C00B93EC5 /* Structs */,
 				A89E61CD2048BF0F004AD15E /* XPlore */,
 				A8ADBBBA2044C8A500F3873B /* Ingredients */,
 			);
@@ -493,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */,
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
 			);
