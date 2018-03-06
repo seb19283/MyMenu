@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7240D473B5A8648A4DBB3FC5 /* Pods_MyMenu.framework in Frameworks */,
+				43DB57DBA518D3F23F43E811 /* Pods_MyMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FAC95C37C37F77564D64881 /* Pods_MyMenuTests.framework in Frameworks */,
+				1B8D06CC17115DF7039763BA /* Pods_MyMenuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4369F08BC4986F6474EA246F /* Pods_MyMenuUITests.framework in Frameworks */,
+				6573CEF8C1DBB76044DDE24B /* Pods_MyMenuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +126,8 @@
 				A8A8BB3A2034A57C009ACDC9 /* MyMenuTests */,
 				A8A8BB452034A57C009ACDC9 /* MyMenuUITests */,
 				A8A8BB242034A57C009ACDC9 /* Products */,
-				324ABCC2476B0D2767C84417 /* Pods */,
-				DD0AB02F98E82EF50BD5172E /* Frameworks */,
+				BC463C032ECC39CDDD0FB19A /* Pods */,
+				E4B80285F904307029222C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */,
+				F367288E2044999E00A3B880 /* FirstStartController.swift */,
+				F3E7B2D9204876F500ED846B /* CategoryCell.swift */,
 				A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */,
 				A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */,
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
@@ -185,9 +187,22 @@
 		DD0AB02F98E82EF50BD5172E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8AD4A9446A19D9DD48334ECD /* Pods_MyMenu.framework */,
-				D4BEF18C3E6CF613C8CE84EE /* Pods_MyMenuTests.framework */,
-				67A5D94CB88BC901ED53D799 /* Pods_MyMenuUITests.framework */,
+				6E532B576195B22721D6E530 /* Pods-MyMenu.debug.xcconfig */,
+				59A07152F97F133912D09819 /* Pods-MyMenu.release.xcconfig */,
+				A184A37C514325B3CE9D9668 /* Pods-MyMenuTests.debug.xcconfig */,
+				6BCBE558AB6021B59FBCAA9C /* Pods-MyMenuTests.release.xcconfig */,
+				BEC290E89B48682D0822D873 /* Pods-MyMenuUITests.debug.xcconfig */,
+				017BF45BF2AC23D88D5C78B8 /* Pods-MyMenuUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E4B80285F904307029222C44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E939F0084C426BAC9E06BC66 /* Pods_MyMenu.framework */,
+				EE27038A1A33A67A97750377 /* Pods_MyMenuTests.framework */,
+				6A5DA9A5117C084839B7C7F5 /* Pods_MyMenuUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,12 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A8BB4B2034A57C009ACDC9 /* Build configuration list for PBXNativeTarget "MyMenu" */;
 			buildPhases = (
-				76C8891370865F9C50E6AD50 /* [CP] Check Pods Manifest.lock */,
+				E98D27F919B7E426198D9FDF /* [CP] Check Pods Manifest.lock */,
 				A8A8BB1F2034A57C009ACDC9 /* Sources */,
 				A8A8BB202034A57C009ACDC9 /* Frameworks */,
 				A8A8BB212034A57C009ACDC9 /* Resources */,
-				9052F32F066DD456D62E17B7 /* [CP] Embed Pods Frameworks */,
-				B9C6B6213B50EB97C3894878 /* [CP] Copy Pods Resources */,
+				9FDEF1B35E7C125C11DAF9AE /* [CP] Embed Pods Frameworks */,
+				95A000CFBBF0B040DB65817C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,12 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A8BB4E2034A57C009ACDC9 /* Build configuration list for PBXNativeTarget "MyMenuTests" */;
 			buildPhases = (
-				0C24741C569A24674BAA66D7 /* [CP] Check Pods Manifest.lock */,
+				A565E9118B078200AB28BCBA /* [CP] Check Pods Manifest.lock */,
 				A8A8BB332034A57C009ACDC9 /* Sources */,
 				A8A8BB342034A57C009ACDC9 /* Frameworks */,
 				A8A8BB352034A57C009ACDC9 /* Resources */,
-				DD7D603C02AACADE93958D32 /* [CP] Embed Pods Frameworks */,
-				1D8092AFDE99D0C92017D738 /* [CP] Copy Pods Resources */,
+				8080F4656184ADFA7C9A262E /* [CP] Embed Pods Frameworks */,
+				DFC21AB8D9F1CBD483D9171C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,12 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A8BB512034A57C009ACDC9 /* Build configuration list for PBXNativeTarget "MyMenuUITests" */;
 			buildPhases = (
-				1116BAF67D82DBB09F912B5C /* [CP] Check Pods Manifest.lock */,
+				3E1530E271281E8AF12FF044 /* [CP] Check Pods Manifest.lock */,
 				A8A8BB3E2034A57C009ACDC9 /* Sources */,
 				A8A8BB3F2034A57C009ACDC9 /* Frameworks */,
 				A8A8BB402034A57C009ACDC9 /* Resources */,
-				EB7435EB512F086E30014381 /* [CP] Embed Pods Frameworks */,
-				C5FC4CEBE6A58E92B09DD086 /* [CP] Copy Pods Resources */,
+				8808DD097DA566DD4DBB998A /* [CP] Embed Pods Frameworks */,
+				25F334A158B6091FE7C051F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,25 +346,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C24741C569A24674BAA66D7 /* [CP] Check Pods Manifest.lock */ = {
+		25F334A158B6091FE7C051F0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyMenuTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1116BAF67D82DBB09F912B5C /* [CP] Check Pods Manifest.lock */ = {
+		3E1530E271281E8AF12FF044 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +379,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1D8092AFDE99D0C92017D738 /* [CP] Copy Pods Resources */ = {
+		8080F4656184ADFA7C9A262E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8808DD097DA566DD4DBB998A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95A000CFBBF0B040DB65817C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,28 +421,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		76C8891370865F9C50E6AD50 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyMenu-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9052F32F066DD456D62E17B7 /* [CP] Embed Pods Frameworks */ = {
+		9FDEF1B35E7C125C11DAF9AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,7 +448,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9C6B6213B50EB97C3894878 /* [CP] Copy Pods Resources */ = {
+		A565E9118B078200AB28BCBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMenuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC21AB8D9F1CBD483D9171C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,61 +478,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5FC4CEBE6A58E92B09DD086 /* [CP] Copy Pods Resources */ = {
+		E98D27F919B7E426198D9FDF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMenu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD7D603C02AACADE93958D32 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB7435EB512F086E30014381 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -666,7 +672,7 @@
 		};
 		A8A8BB4C2034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9A2C75A3A76B313A6B577E9 /* Pods-MyMenu.debug.xcconfig */;
+			baseConfigurationReference = 6E532B576195B22721D6E530 /* Pods-MyMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -682,7 +688,7 @@
 		};
 		A8A8BB4D2034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DCC9460D354F5065F9DA7BE /* Pods-MyMenu.release.xcconfig */;
+			baseConfigurationReference = 59A07152F97F133912D09819 /* Pods-MyMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -698,7 +704,7 @@
 		};
 		A8A8BB4F2034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A36F48591F03AD2274949F5 /* Pods-MyMenuTests.debug.xcconfig */;
+			baseConfigurationReference = A184A37C514325B3CE9D9668 /* Pods-MyMenuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -715,7 +721,7 @@
 		};
 		A8A8BB502034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF7C570FF968731200EA374C /* Pods-MyMenuTests.release.xcconfig */;
+			baseConfigurationReference = 6BCBE558AB6021B59FBCAA9C /* Pods-MyMenuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -732,7 +738,7 @@
 		};
 		A8A8BB522034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71EB32C883D21D21BA424085 /* Pods-MyMenuUITests.debug.xcconfig */;
+			baseConfigurationReference = BEC290E89B48682D0822D873 /* Pods-MyMenuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -748,7 +754,7 @@
 		};
 		A8A8BB532034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B08FE270AC5BBAA5088DCC17 /* Pods-MyMenuUITests.release.xcconfig */;
+			baseConfigurationReference = 017BF45BF2AC23D88D5C78B8 /* Pods-MyMenuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
