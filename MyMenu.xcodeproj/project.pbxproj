@@ -16,7 +16,10 @@
 		A8A8BB312034A57C009ACDC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */; };
 		A8A8BB3C2034A57C009ACDC9 /* MyMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB3B2034A57C009ACDC9 /* MyMenuTests.swift */; };
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
+		F367288F2044999E00A3B880 /* FirstStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367288E2044999E00A3B880 /* FirstStartController.swift */; };
 		F3BCEDA8203F39E800F411BF /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCEDA7203F39E800F411BF /* Ingredient.swift */; };
+		F3E7B2DA204876F500ED846B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7B2D9204876F500ED846B /* CategoryCell.swift */; };
+		F3E7B2DC204881FE00ED846B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3E7B2DB204881FE00ED846B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +61,10 @@
 		BEC290E89B48682D0822D873 /* Pods-MyMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E939F0084C426BAC9E06BC66 /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE27038A1A33A67A97750377 /* Pods_MyMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F367288E2044999E00A3B880 /* FirstStartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStartController.swift; sourceTree = "<group>"; };
 		F3BCEDA7203F39E800F411BF /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		F3E7B2D9204876F500ED846B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		F3E7B2DB204881FE00ED846B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,19 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		324ABCC2476B0D2767C84417 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9A2C75A3A76B313A6B577E9 /* Pods-MyMenu.debug.xcconfig */,
-				1DCC9460D354F5065F9DA7BE /* Pods-MyMenu.release.xcconfig */,
-				2A36F48591F03AD2274949F5 /* Pods-MyMenuTests.debug.xcconfig */,
-				AF7C570FF968731200EA374C /* Pods-MyMenuTests.release.xcconfig */,
-				71EB32C883D21D21BA424085 /* Pods-MyMenuUITests.debug.xcconfig */,
-				B08FE270AC5BBAA5088DCC17 /* Pods-MyMenuUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A8A8BB1A2034A57C009ACDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */,
+				F367288E2044999E00A3B880 /* FirstStartController.swift */,
+				F3E7B2D9204876F500ED846B /* CategoryCell.swift */,
 				A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */,
 				A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */,
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
 				A8A8BB322034A57C009ACDC9 /* Info.plist */,
+				F3E7B2DB204881FE00ED846B /* GoogleService-Info.plist */,
 				F3BCEDA7203F39E800F411BF /* Ingredient.swift */,
 			);
 			path = MyMenu;
@@ -295,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A8BB312034A57C009ACDC9 /* LaunchScreen.storyboard in Resources */,
-				A8962C1A203D16D2006B57FE /* GoogleService-Info.plist in Resources */,
+				F3E7B2DC204881FE00ED846B /* GoogleService-Info.plist in Resources */,
 				A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */,
 				A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */,
 			);
@@ -480,6 +476,8 @@
 			files = (
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				F3BCEDA8203F39E800F411BF /* Ingredient.swift in Sources */,
+				F367288F2044999E00A3B880 /* FirstStartController.swift in Sources */,
+				F3E7B2DA204876F500ED846B /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

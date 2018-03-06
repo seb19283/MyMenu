@@ -12,6 +12,7 @@ class Ingredient{
     var name: String = ""
     var category: Int = 0
 
+    
     init(name: String, category: Int){
         self.name = name
         self.category = category
