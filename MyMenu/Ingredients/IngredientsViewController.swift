@@ -49,10 +49,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
             let category = snapshot.key
             self.categories.append(category)
             
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-//                self.ingredients.append(ExpandableNames(isExpanded: true, names: names))
-                self.tableView.reloadData()
-            }
+            
             
             
         }, withCancel: nil)

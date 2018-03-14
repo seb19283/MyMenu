@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4369F08BC4986F6474EA246F /* Pods_MyMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A5D94CB88BC901ED53D799 /* Pods_MyMenuUITests.framework */; };
-		7240D473B5A8648A4DBB3FC5 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD4A9446A19D9DD48334ECD /* Pods_MyMenu.framework */; };
-		9FAC95C37C37F77564D64881 /* Pods_MyMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BEF18C3E6CF613C8CE84EE /* Pods_MyMenuTests.framework */; };
+		2D87F498A05CDF4C879A6E03 /* Pods_MyMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34668C3AD9C4C4A07A59E8BD /* Pods_MyMenuTests.framework */; };
+		92BD767E96C41FB02AFE5FB7 /* Pods_MyMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797F91CDEE539A5DA8F0F967 /* Pods_MyMenuUITests.framework */; };
 		A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */; };
+		A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E3A17204F007D0018853E /* FirstStartController.swift */; };
+		A85E3A1E204F041E0018853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A85E3A1D204F041E0018853E /* GoogleService-Info.plist */; };
 		A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */; };
 		A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */; };
 		A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		A8A8BB3C2034A57C009ACDC9 /* MyMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB3B2034A57C009ACDC9 /* MyMenuTests.swift */; };
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
 		A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */; };
+		E08C2F00F616FB515900E6D1 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1DCC9460D354F5065F9DA7BE /* Pods-MyMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu.release.xcconfig"; sourceTree = "<group>"; };
-		2A36F48591F03AD2274949F5 /* Pods-MyMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
-		67A5D94CB88BC901ED53D799 /* Pods_MyMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71EB32C883D21D21BA424085 /* Pods-MyMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8AD4A9446A19D9DD48334ECD /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0745A2A2CF142798333AA732 /* Pods-MyMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.release.xcconfig"; sourceTree = "<group>"; };
+		34668C3AD9C4C4A07A59E8BD /* Pods_MyMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7F3F85382B1E11543B6C3C /* Pods-MyMenuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		797F91CDEE539A5DA8F0F967 /* Pods_MyMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FA85394E279BBC7E3E593C /* Pods-MyMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu.release.xcconfig"; sourceTree = "<group>"; };
+		93829836386CC691A75F99AD /* Pods-MyMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		9B779985CD6E886E0B42A4F1 /* Pods-MyMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E46263DDFA145088EF85C1D /* Pods-MyMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
+		A85E3A17204F007D0018853E /* FirstStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStartController.swift; sourceTree = "<group>"; };
+		A85E3A1D204F041E0018853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8A8BB232034A57C009ACDC9 /* MyMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A8BB2B2034A57C009ACDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,10 +64,7 @@
 		A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuUITests.swift; sourceTree = "<group>"; };
 		A8A8BB482034A57C009ACDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
-		AF7C570FF968731200EA374C /* Pods-MyMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.release.xcconfig"; sourceTree = "<group>"; };
-		B08FE270AC5BBAA5088DCC17 /* Pods-MyMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D4BEF18C3E6CF613C8CE84EE /* Pods_MyMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9A2C75A3A76B313A6B577E9 /* Pods-MyMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43DB57DBA518D3F23F43E811 /* Pods_MyMenu.framework in Frameworks */,
+				E08C2F00F616FB515900E6D1 /* Pods_MyMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B8D06CC17115DF7039763BA /* Pods_MyMenuTests.framework in Frameworks */,
+				2D87F498A05CDF4C879A6E03 /* Pods_MyMenuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,22 +88,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6573CEF8C1DBB76044DDE24B /* Pods_MyMenuUITests.framework in Frameworks */,
+				92BD767E96C41FB02AFE5FB7 /* Pods_MyMenuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		324ABCC2476B0D2767C84417 /* Pods */ = {
+		0159381F0C41C59EF6E9A771 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9A2C75A3A76B313A6B577E9 /* Pods-MyMenu.debug.xcconfig */,
-				1DCC9460D354F5065F9DA7BE /* Pods-MyMenu.release.xcconfig */,
-				2A36F48591F03AD2274949F5 /* Pods-MyMenuTests.debug.xcconfig */,
-				AF7C570FF968731200EA374C /* Pods-MyMenuTests.release.xcconfig */,
-				71EB32C883D21D21BA424085 /* Pods-MyMenuUITests.debug.xcconfig */,
-				B08FE270AC5BBAA5088DCC17 /* Pods-MyMenuUITests.release.xcconfig */,
+				93829836386CC691A75F99AD /* Pods-MyMenu.debug.xcconfig */,
+				88FA85394E279BBC7E3E593C /* Pods-MyMenu.release.xcconfig */,
+				9B779985CD6E886E0B42A4F1 /* Pods-MyMenuTests.debug.xcconfig */,
+				0745A2A2CF142798333AA732 /* Pods-MyMenuTests.release.xcconfig */,
+				3F7F3F85382B1E11543B6C3C /* Pods-MyMenuUITests.debug.xcconfig */,
+				9E46263DDFA145088EF85C1D /* Pods-MyMenuUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,8 +130,8 @@
 				A8A8BB3A2034A57C009ACDC9 /* MyMenuTests */,
 				A8A8BB452034A57C009ACDC9 /* MyMenuUITests */,
 				A8A8BB242034A57C009ACDC9 /* Products */,
-				BC463C032ECC39CDDD0FB19A /* Pods */,
 				E4B80285F904307029222C44 /* Frameworks */,
+				0159381F0C41C59EF6E9A771 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,12 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */,
-				F367288E2044999E00A3B880 /* FirstStartController.swift */,
-				F3E7B2D9204876F500ED846B /* CategoryCell.swift */,
 				A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */,
 				A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */,
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
 				A8A8BB322034A57C009ACDC9 /* Info.plist */,
+				A85E3A1D204F041E0018853E /* GoogleService-Info.plist */,
+				A85E3A17204F007D0018853E /* FirstStartController.swift */,
 				A802CF11204B648C00B93EC5 /* Structs */,
 				A89E61CD2048BF0F004AD15E /* XPlore */,
 				A8ADBBBA2044C8A500F3873B /* Ingredients */,
@@ -184,25 +188,12 @@
 			path = Ingredients;
 			sourceTree = "<group>";
 		};
-		DD0AB02F98E82EF50BD5172E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6E532B576195B22721D6E530 /* Pods-MyMenu.debug.xcconfig */,
-				59A07152F97F133912D09819 /* Pods-MyMenu.release.xcconfig */,
-				A184A37C514325B3CE9D9668 /* Pods-MyMenuTests.debug.xcconfig */,
-				6BCBE558AB6021B59FBCAA9C /* Pods-MyMenuTests.release.xcconfig */,
-				BEC290E89B48682D0822D873 /* Pods-MyMenuUITests.debug.xcconfig */,
-				017BF45BF2AC23D88D5C78B8 /* Pods-MyMenuUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E4B80285F904307029222C44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E939F0084C426BAC9E06BC66 /* Pods_MyMenu.framework */,
-				EE27038A1A33A67A97750377 /* Pods_MyMenuTests.framework */,
-				6A5DA9A5117C084839B7C7F5 /* Pods_MyMenuUITests.framework */,
+				B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */,
+				34668C3AD9C4C4A07A59E8BD /* Pods_MyMenuTests.framework */,
+				797F91CDEE539A5DA8F0F967 /* Pods_MyMenuUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -325,6 +316,7 @@
 			files = (
 				A8A8BB312034A57C009ACDC9 /* LaunchScreen.storyboard in Resources */,
 				A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */,
+				A85E3A1E204F041E0018853E /* GoogleService-Info.plist in Resources */,
 				A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +501,7 @@
 				A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */,
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
+				A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +665,7 @@
 		};
 		A8A8BB4C2034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E532B576195B22721D6E530 /* Pods-MyMenu.debug.xcconfig */;
+			baseConfigurationReference = 93829836386CC691A75F99AD /* Pods-MyMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -688,7 +681,7 @@
 		};
 		A8A8BB4D2034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59A07152F97F133912D09819 /* Pods-MyMenu.release.xcconfig */;
+			baseConfigurationReference = 88FA85394E279BBC7E3E593C /* Pods-MyMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,7 +697,7 @@
 		};
 		A8A8BB4F2034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A184A37C514325B3CE9D9668 /* Pods-MyMenuTests.debug.xcconfig */;
+			baseConfigurationReference = 9B779985CD6E886E0B42A4F1 /* Pods-MyMenuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,7 +714,7 @@
 		};
 		A8A8BB502034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BCBE558AB6021B59FBCAA9C /* Pods-MyMenuTests.release.xcconfig */;
+			baseConfigurationReference = 0745A2A2CF142798333AA732 /* Pods-MyMenuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,7 +731,7 @@
 		};
 		A8A8BB522034A57C009ACDC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEC290E89B48682D0822D873 /* Pods-MyMenuUITests.debug.xcconfig */;
+			baseConfigurationReference = 3F7F3F85382B1E11543B6C3C /* Pods-MyMenuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -754,7 +747,7 @@
 		};
 		A8A8BB532034A57C009ACDC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 017BF45BF2AC23D88D5C78B8 /* Pods-MyMenuUITests.release.xcconfig */;
+			baseConfigurationReference = 9E46263DDFA145088EF85C1D /* Pods-MyMenuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
