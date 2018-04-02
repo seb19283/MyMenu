@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		2D87F498A05CDF4C879A6E03 /* Pods_MyMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34668C3AD9C4C4A07A59E8BD /* Pods_MyMenuTests.framework */; };
 		92BD767E96C41FB02AFE5FB7 /* Pods_MyMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797F91CDEE539A5DA8F0F967 /* Pods_MyMenuUITests.framework */; };
-		A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */; };
+		A802CF10204B5A1A00B93EC5 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802CF0F204B5A1A00B93EC5 /* Structs.swift */; };
+		A832A522205AC20000D47E70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A832A521205AC20000D47E70 /* GoogleService-Info.plist */; };
 		A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E3A17204F007D0018853E /* FirstStartController.swift */; };
-		A85E3A1E204F041E0018853E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A85E3A1D204F041E0018853E /* GoogleService-Info.plist */; };
+		A87FDB54205C619C0037648C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FDB53205C619C0037648C /* Extensions.swift */; };
+		A880A7892061EB7200ADFF10 /* RecipeEdamam.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */; };
+		A880A78B2061EC8200ADFF10 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */; };
+		A880A78D2061EC8D00ADFF10 /* GenerateRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */; };
 		A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */; };
 		A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */; };
 		A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */; };
@@ -19,6 +23,7 @@
 		A8A8BB3C2034A57C009ACDC9 /* MyMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB3B2034A57C009ACDC9 /* MyMenuTests.swift */; };
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
 		A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */; };
+		A8CCEC8C2069707C0055308C /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */; };
 		E08C2F00F616FB515900E6D1 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,9 +53,13 @@
 		93829836386CC691A75F99AD /* Pods-MyMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenu/Pods-MyMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		9B779985CD6E886E0B42A4F1 /* Pods-MyMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E46263DDFA145088EF85C1D /* Pods-MyMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
+		A802CF0F204B5A1A00B93EC5 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		A832A521205AC20000D47E70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A85E3A17204F007D0018853E /* FirstStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStartController.swift; sourceTree = "<group>"; };
-		A85E3A1D204F041E0018853E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A87FDB53205C619C0037648C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEdamam.swift; sourceTree = "<group>"; };
+		A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
+		A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRecipe.swift; sourceTree = "<group>"; };
 		A8A8BB232034A57C009ACDC9 /* MyMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A8BB2B2034A57C009ACDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 		A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuUITests.swift; sourceTree = "<group>"; };
 		A8A8BB482034A57C009ACDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroceryListViewController.swift; path = "MyMenu/Grocery List/GroceryListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,17 +118,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A802CF11204B648C00B93EC5 /* Structs */ = {
+		A802CF11204B648C00B93EC5 /* Useful Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				A802CF0F204B5A1A00B93EC5 /* ExpandableNames.swift */,
+				A802CF0F204B5A1A00B93EC5 /* Structs.swift */,
+				A87FDB53205C619C0037648C /* Extensions.swift */,
 			);
-			path = Structs;
+			path = "Useful Stuff";
 			sourceTree = "<group>";
 		};
 		A89E61CD2048BF0F004AD15E /* XPlore */ = {
 			isa = PBXGroup;
 			children = (
+				A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */,
+				A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */,
+				A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */,
 			);
 			path = XPlore;
 			sourceTree = "<group>";
@@ -153,11 +167,12 @@
 				A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */,
 				A8A8BB2F2034A57C009ACDC9 /* LaunchScreen.storyboard */,
 				A8A8BB322034A57C009ACDC9 /* Info.plist */,
-				A85E3A1D204F041E0018853E /* GoogleService-Info.plist */,
+				A832A521205AC20000D47E70 /* GoogleService-Info.plist */,
 				A85E3A17204F007D0018853E /* FirstStartController.swift */,
-				A802CF11204B648C00B93EC5 /* Structs */,
+				A802CF11204B648C00B93EC5 /* Useful Stuff */,
 				A89E61CD2048BF0F004AD15E /* XPlore */,
 				A8ADBBBA2044C8A500F3873B /* Ingredients */,
+				A8CCEC8D206970840055308C /* Grocery List */,
 			);
 			path = MyMenu;
 			sourceTree = "<group>";
@@ -186,6 +201,14 @@
 				A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */,
 			);
 			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		A8CCEC8D206970840055308C /* Grocery List */ = {
+			isa = PBXGroup;
+			children = (
+				A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */,
+			);
+			path = "Grocery List";
 			sourceTree = "<group>";
 		};
 		E4B80285F904307029222C44 /* Frameworks */ = {
@@ -316,8 +339,8 @@
 			files = (
 				A8A8BB312034A57C009ACDC9 /* LaunchScreen.storyboard in Resources */,
 				A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */,
-				A85E3A1E204F041E0018853E /* GoogleService-Info.plist in Resources */,
 				A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */,
+				A832A522205AC20000D47E70 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,10 +521,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A802CF10204B5A1A00B93EC5 /* ExpandableNames.swift in Sources */,
+				A87FDB54205C619C0037648C /* Extensions.swift in Sources */,
+				A802CF10204B5A1A00B93EC5 /* Structs.swift in Sources */,
+				A8CCEC8C2069707C0055308C /* GroceryListViewController.swift in Sources */,
+				A880A78D2061EC8D00ADFF10 /* GenerateRecipe.swift in Sources */,
+				A880A7892061EB7200ADFF10 /* RecipeEdamam.swift in Sources */,
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
 				A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */,
+				A880A78B2061EC8200ADFF10 /* GenerateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +700,7 @@
 				DEVELOPMENT_TEAM = 93LK62MZ6V;
 				INFOPLIST_FILE = MyMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "New-Wave.MyMenu";
+				PRODUCT_BUNDLE_IDENTIFIER = "New-Wave.DishDetective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,7 +716,7 @@
 				DEVELOPMENT_TEAM = 93LK62MZ6V;
 				INFOPLIST_FILE = MyMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "New-Wave.MyMenu";
+				PRODUCT_BUNDLE_IDENTIFIER = "New-Wave.DishDetective";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
