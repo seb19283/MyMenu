@@ -10,6 +10,9 @@ import UIKit
 
 class GenerateViewController: UIViewController {
 
+    var recipeGenerator: GenerateRecipe?
+    var recipes = [RecipeEdamam]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

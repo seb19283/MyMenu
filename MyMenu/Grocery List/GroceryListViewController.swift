@@ -1,20 +1,21 @@
 //
-//  IngredientsViewController.swift
+//  GroceryListViewController.swift
 //  MyMenu
 //
-//  Created by Sebastian Connelly (student LM) on 2/26/18.
+//  Created by Sebastian Connelly (student LM) on 3/26/18.
 //  Copyright © 2018 Sebastian Connelly (student LM). All rights reserved.
 //
 
 import UIKit
+import Firebase
 import FirebaseDatabase
 
-class IngredientsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class GroceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var navigationBar: UINavigationItem!
     @IBOutlet var editButton: UIBarButtonItem!
     @IBOutlet var addButton: UIBarButtonItem!
-    @IBOutlet var navigationBar: UINavigationItem!
     
     var ingredients = [ExpandableNames]()
     var ref: DatabaseReference!
@@ -42,6 +43,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         deleteButton = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(deleteButtonClicked))
         deleteButton.tintColor = .red
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,7 +61,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         ingredients.removeAll()
         categories.removeAll()
         
-        ref.child("Test").child("Ingredients").observe(.childAdded, with: { (snapshot) in
+        ref.child("Test").child("Grocery List").observe(.childAdded, with: { (snapshot) in
             
             var names = [String]()
             
@@ -79,7 +81,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
         
-        self.performSegue(withIdentifier: "Add", sender: nil)
+        performSegue(withIdentifier: "Add", sender: nil)
         
     }
     
@@ -93,7 +95,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @objc func deleteButtonClicked() {
-        self.alertMessage("Do you want to add these ingredients to your grocery list?", indexPaths: selectedIndexPaths)
+        self.alertMessage("Do you want to add these ingredients to your ingredients?", indexPaths: selectedIndexPaths)
         selectedIndexPaths.removeAll()
         deleteButton.title = "Delete"
         deleteButton.isEnabled = false
@@ -245,20 +247,21 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
             
             // Create an alert that prompts the user whether they want to add to grocery list or not
-            self.alertMessage("Do you want to add this ingredient to your grocery list?", indexPaths: [indexPath])
+            self.alertMessage("Do you want to add this ingredient to your indgredients?", indexPaths: [indexPath])
             
         }
         
-        let groceryListAction = UIContextualAction(style: .normal, title: "Add To Grocery List") { (action, view, handler) in
+        let ingredientsAction = UIContextualAction(style: .normal, title: "Add To Ingredients") { (action, view, handler) in
             
             let i = self.ingredients[indexPath.section].names[indexPath.row]
             
-            self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).child(i).setValue(i)
+            self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).child(i).setValue(i)
             tableView.setEditing(false, animated: true)
+            
         }
         
         deleteAction.backgroundColor = .red
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, groceryListAction])
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, ingredientsAction])
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }
@@ -270,15 +273,15 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
             for indexPath in indexPaths {
                 let i = self.ingredients[indexPath.section].names.remove(at: indexPath.row)
                 
-                self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).child(
+                self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).child(
                     "\(i)").setValue(i)
                 
                 if self.ingredients[indexPath.section].names.count == 0 {
-                    self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).removeValue()
+                    self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).removeValue()
                     self.categories.remove(at: indexPath.section)
                     self.ingredients.remove(at: indexPath.section)
                 } else {
-                    self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).child("\(i)").removeValue()
+                    self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).child("\(i)").removeValue()
                 }
                 
                 self.tableView.reloadData()
@@ -291,11 +294,11 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
                 let i = self.ingredients[indexPath.section].names.remove(at: indexPath.row)
                 
                 if self.ingredients[indexPath.section].names.count == 0 {
-                    self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).removeValue()
+                    self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).removeValue()
                     self.categories.remove(at: indexPath.section)
                     self.ingredients.remove(at: indexPath.section)
                 } else {
-                    self.ref.child("Test").child("Ingredients").child(self.categories[indexPath.section]).child("\(i)").removeValue()
+                    self.ref.child("Test").child("Grocery List").child(self.categories[indexPath.section]).child("\(i)").removeValue()
                 }
                 
                 self.tableView.reloadData()
@@ -312,7 +315,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? UINavigationController, let targetVC = destinationVC.topViewController as? AddIngredientsViewController {
-            targetVC.startController = "Ingredients"
+            targetVC.startController = "Grocery List"
         }
     }
     

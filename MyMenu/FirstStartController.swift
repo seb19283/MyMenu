@@ -14,7 +14,7 @@ class FirstStartController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var tableView: UITableView!
     
-    let categories: [String] = ["Dairy", "Vegetables & Legumes", "Fruits", "Baking & Grains", "Protein", "Condiment", "Oils, Seasonings, & Sauces", "Beverages", "Soup", "Nuts", "Desserts & Snack"]
+    let categories: [String] = ["Dairy", "Vegetables & Legumes", "Fruits", "Baking & Grains", "Protein", "Condiment", "Oils, Seasonings, & Sauces", "Beverages", "Soup", "Nuts", "Desserts & Snacks"]
     var ingredients = [ExpandableNames]()
     var selectedIngredients = [String:[String]]()
     
@@ -34,7 +34,11 @@ class FirstStartController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func doneButtonClicked(_ sender: UIBarButtonItem) {
         
-        ref.child("Test").child("Ingredients").setValue(selectedIngredients)
+        for (category,ingredient) in selectedIngredients {
+            for i in ingredient{
+                ref.child("Test").child("Ingredients").child(category).child(i).setValue(i)
+            }
+        }
         
         self.dismiss(animated: true, completion: nil)
         
@@ -88,9 +92,7 @@ class FirstStartController: UIViewController, UITableViewDelegate, UITableViewDa
                 selectedIngredients[categories[indexPath.section]]?.append(ingredients[indexPath.section].names[indexPath.row])
             }
         }
-        
-        print(selectedIngredients)
-        
+                
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
