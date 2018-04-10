@@ -16,13 +16,15 @@ class RecipeEdamam{
     var favorited: Bool
     var ingredients: [String]
     var yield: Double
+    var tags: String
     //         let recipeObject = Recipe(imageURL: imageURL, title: title, sourceURL: sourceURL, ingredients: ingredients, yield: yield)
-    init(imageURL: String, title: String, sourceURL: String, ingredients: [String], yield: Double){
+    init(imageURL: String, title: String, sourceURL: String, ingredients: [String], yield: Double, tags: String){
         
         self.title = title
         self.favorited = false
         self.ingredients = ingredients
         self.yield = yield
+        self.tags = tags
         
         self.image = UIImage()
         
@@ -30,10 +32,9 @@ class RecipeEdamam{
             self.link = url
         }
         
-        let request = URLRequest(url: URL(string: imageURL)!)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        URLSession.shared.dataTask(with: URL(string: imageURL)!) { (data, response, error) in
             if let imageData = data {
-                self.image = UIImage(data: imageData)
+                self.image = UIImage(data: imageData)!
             }
         }.resume()
         

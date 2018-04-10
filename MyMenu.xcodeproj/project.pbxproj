@@ -10,7 +10,9 @@
 		2D87F498A05CDF4C879A6E03 /* Pods_MyMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34668C3AD9C4C4A07A59E8BD /* Pods_MyMenuTests.framework */; };
 		92BD767E96C41FB02AFE5FB7 /* Pods_MyMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797F91CDEE539A5DA8F0F967 /* Pods_MyMenuUITests.framework */; };
 		A802CF10204B5A1A00B93EC5 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802CF0F204B5A1A00B93EC5 /* Structs.swift */; };
+		A80C56622075B6D9008797D6 /* RecipeRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80C56612075B6D9008797D6 /* RecipeRequirementsViewController.swift */; };
 		A824B1DE2075219F007F7BAE /* XPloreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824B1DD2075219F007F7BAE /* XPloreViewController.swift */; };
+		A824B1E0207532C1007F7BAE /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824B1DF207532C1007F7BAE /* RecipeCell.swift */; };
 		A832A522205AC20000D47E70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A832A521205AC20000D47E70 /* GoogleService-Info.plist */; };
 		A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E3A17204F007D0018853E /* FirstStartController.swift */; };
 		A87FDB54205C619C0037648C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FDB53205C619C0037648C /* Extensions.swift */; };
@@ -25,6 +27,7 @@
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
 		A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */; };
 		A8CCEC8C2069707C0055308C /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */; };
+		A8D0F64620781D1300ABC76F /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0F64520781D1300ABC76F /* RecipeViewController.swift */; };
 		A8EAD775207434E6005BEA3B /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAD774207434E6005BEA3B /* AddIngredientsViewController.swift */; };
 		A8EAD77720745053005BEA3B /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAD77620745053005BEA3B /* IngredientViewController.swift */; };
 		E08C2F00F616FB515900E6D1 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */; };
@@ -57,7 +60,9 @@
 		9B779985CD6E886E0B42A4F1 /* Pods-MyMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuTests/Pods-MyMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E46263DDFA145088EF85C1D /* Pods-MyMenuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMenuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMenuUITests/Pods-MyMenuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A802CF0F204B5A1A00B93EC5 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		A80C56612075B6D9008797D6 /* RecipeRequirementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequirementsViewController.swift; sourceTree = "<group>"; };
 		A824B1DD2075219F007F7BAE /* XPloreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPloreViewController.swift; sourceTree = "<group>"; };
+		A824B1DF207532C1007F7BAE /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		A832A521205AC20000D47E70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A85E3A17204F007D0018853E /* FirstStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStartController.swift; sourceTree = "<group>"; };
 		A87FDB53205C619C0037648C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		A8A8BB482034A57C009ACDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroceryListViewController.swift; path = "MyMenu/Grocery List/GroceryListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A8D0F64520781D1300ABC76F /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A8EAD774207434E6005BEA3B /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		A8EAD77620745053005BEA3B /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,9 @@
 			children = (
 				A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */,
 				A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */,
+				A8D0F64520781D1300ABC76F /* RecipeViewController.swift */,
+				A80C56612075B6D9008797D6 /* RecipeRequirementsViewController.swift */,
+				A824B1DF207532C1007F7BAE /* RecipeCell.swift */,
 				A824B1DD2075219F007F7BAE /* XPloreViewController.swift */,
 				A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */,
 			);
@@ -538,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80C56622075B6D9008797D6 /* RecipeRequirementsViewController.swift in Sources */,
 				A8EAD77720745053005BEA3B /* IngredientViewController.swift in Sources */,
 				A87FDB54205C619C0037648C /* Extensions.swift in Sources */,
 				A802CF10204B5A1A00B93EC5 /* Structs.swift in Sources */,
@@ -549,7 +559,9 @@
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
 				A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */,
+				A824B1E0207532C1007F7BAE /* RecipeCell.swift in Sources */,
 				A880A78B2061EC8200ADFF10 /* GenerateViewController.swift in Sources */,
+				A8D0F64620781D1300ABC76F /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

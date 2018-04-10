@@ -7,18 +7,15 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class GenerateRecipe {
     
-    func getRecipesWithURL(url: String) {
+    func getRecipesWithURL(url: String, success: @escaping ([RecipeEdamam]) -> Void) {
         
-        var recipes: [RecipeEdamam] = []
+        var recipes = [RecipeEdamam]()
         
-        let urlString = url
-        
-        let url = URL(string: urlString)
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
             
             if let data = data, let feed = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? NSDictionary, let hits = feed["hits"] as? NSArray{
                 
@@ -26,7 +23,23 @@ class GenerateRecipe {
                     
                     if let hit = hit as? NSDictionary, let recipe = hit.value(forKey: "recipe") as? NSDictionary, let imageURL = recipe.value(forKey: "image") as? String, let title = recipe.value(forKey: "label") as? String, let sourceURL = recipe.value(forKey: "url") as? String, let ingredients = recipe.value(forKey: "ingredientLines") as? [String], let yield = recipe.value(forKey: "yield") as? Double{
                         
-                        let recipeObject = RecipeEdamam(imageURL: imageURL, title: title, sourceURL: sourceURL, ingredients: ingredients, yield: yield)
+                        var tags = ""
+                        
+                        if let healthLabels = recipe.value(forKey: "healthLabels") as? [String]{
+                            for label in healthLabels {
+                                tags += "\(label), "
+                            }
+                        } else if let dietLabels = recipe.value(forKey: "dietLabels") as? [String]{
+                            for label in dietLabels {
+                                tags += "\(label), "
+                            }
+                        }
+                        
+                        if tags.count > 0 {
+                            tags.removeLast(2)
+                        }
+                        
+                        let recipeObject = RecipeEdamam(imageURL: imageURL, title: title, sourceURL: sourceURL, ingredients: ingredients, yield: yield, tags: tags)
                         
                         recipes.append(recipeObject)
                         
@@ -36,7 +49,10 @@ class GenerateRecipe {
                 
             }
             
+            success(recipes)
+            
         }.resume()
+        
     }
     
 }
