@@ -7,24 +7,61 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class GenerateViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
-    var userIngredients = [[String]]()
     var recipes: [RecipeEdamam]?
     var recipe: RecipeEdamam?
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         ref = Database.database().reference()
         
         tableView.register(RecipeCell.self, forCellReuseIdentifier: "cellID")
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor(r: 108, g: 188, b: 128)
+        tableView.backgroundColor = UIColor(r: 156, g: 207, b: 141)
         tableView.tableFooterView = UIView()
+        
+        getUserIngredients()
+        
+    }
+    
+    func getUserIngredients(){
+        
+        var ingredients = [[String]]()
+        
+        ref.child("Test").child("Ingredients").observe(.childAdded, with: { (snapshot) in
+            
+            var names = [String]()
+            
+            for item in snapshot.children {
+                if let item = item as? DataSnapshot {
+                    if let ingredient = item.key as? String {
+                        names.append(ingredient)
+                    }
+                }
+            }
+            
+            ingredients.append(names)
+            
+//            self.sortRecipes(ingredients: ingredients)
+            
+        }, withCancel: nil)
+    }
+    
+    func sortRecipes(ingredients: [[String]]){
+        
+        guard let r = recipes else {fatalError()}
+        
+        
         
     }
     

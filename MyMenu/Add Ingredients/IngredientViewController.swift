@@ -8,11 +8,12 @@
 
 import UIKit
 
-class IngredientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UISearchBarDelegate {
+class IngredientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     
-    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var titleItem: UINavigationItem!
     @IBOutlet var tableView: UITableView!
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     var category: String?
     var isSearching = false
@@ -30,30 +31,37 @@ class IngredientViewController: UIViewController, UITableViewDelegate, UITableVi
         
         titleItem.title = category
         
-        searchBar.delegate = self
-        searchBar.returnKeyType = .done
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Ingredients"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         
         navigationController?.delegate = self
         
         addIngredients()
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        view.endEditing(true)
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
-            isSearching = false
-            tableView.reloadData()
-        } else {
-            isSearching = true
-            filteredData = ingredients[category!]!.filter({ (ingredient) -> Bool in
-                guard let text = searchBar.text else {return false}
-                return ingredient.contains(text)
-            })
-            tableView.reloadData()
-        }
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        guard let cat = category else { return }
+        
+        filteredData = ingredients[cat]!.filter({( ingredient : String) -> Bool in
+            return ingredient.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
@@ -68,7 +76,7 @@ class IngredientViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if isSearching {
+        if isFiltering() {
             return filteredData.count
         }
         
@@ -82,10 +90,12 @@ class IngredientViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! UITableViewCell
         
-        if isSearching {
+        if isFiltering() {
             cell.textLabel?.text = filteredData[indexPath.row]
-        } else if let c = category, let ingredient = ingredients[c] {
-            cell.textLabel?.text = ingredient[indexPath.row]
+        } else {
+            if let cat = category, let i = ingredients[cat]{
+                cell.textLabel?.text = i[indexPath.row]
+            }
         }
         
         if selectedIngredients.contains((cell.textLabel?.text)!){
@@ -105,13 +115,11 @@ class IngredientViewController: UIViewController, UITableViewDelegate, UITableVi
             cell?.accessoryType = .none
             
             selectedIngredients.remove(at: selectedIngredients.index(of: (cell?.textLabel?.text)!)!)
-            
         }
         else{
             cell?.accessoryType = .checkmark
             
             selectedIngredients.append((cell?.textLabel?.text)!)
-            
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -133,4 +141,8 @@ class IngredientViewController: UIViewController, UITableViewDelegate, UITableVi
     
 }
 
-
+extension IngredientViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}

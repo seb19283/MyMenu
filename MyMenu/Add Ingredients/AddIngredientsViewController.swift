@@ -38,9 +38,13 @@ class AddIngredientsViewController: UIViewController {
     @IBAction func doneButtonClicked(_ sender: UIBarButtonItem) {
         guard let sc = startController else { return }
         
-        for (cat, ingredients) in selectedIngredients {
-            for i in ingredients {
-                self.ref.child("Test").child(sc).child(cat).child(i).setValue(i)
+        if sc == "Recipe" {
+            UserDefaults.standard.set(selectedIngredients, forKey: "Selected Ingredients")
+        } else {
+            for (cat, ingredients) in selectedIngredients {
+                for i in ingredients {
+                    self.ref.child("Test").child(sc).child(cat).child(i).setValue(i)
+                }
             }
         }
         
@@ -51,6 +55,9 @@ class AddIngredientsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? IngredientViewController, let c = category {
             destinationVC.category = c
+            if let s = selectedIngredients[c] {
+                destinationVC.selectedIngredients = s
+            }
         }
     }
     

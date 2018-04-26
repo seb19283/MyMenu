@@ -19,6 +19,8 @@
 		A880A7892061EB7200ADFF10 /* RecipeEdamam.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */; };
 		A880A78B2061EC8200ADFF10 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */; };
 		A880A78D2061EC8D00ADFF10 /* GenerateRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */; };
+		A8A5A6CF2092308E002650CF /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5A6CE2092308E002650CF /* RecipeViewController.swift */; };
+		A8A5A6D1209230C8002650CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5A6D0209230C8002650CF /* WebViewController.swift */; };
 		A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */; };
 		A8A8BB2C2034A57C009ACDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2A2034A57C009ACDC9 /* Main.storyboard */; };
 		A8A8BB2E2034A57C009ACDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A8BB2D2034A57C009ACDC9 /* Assets.xcassets */; };
@@ -27,7 +29,6 @@
 		A8A8BB472034A57C009ACDC9 /* MyMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A8BB462034A57C009ACDC9 /* MyMenuUITests.swift */; };
 		A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */; };
 		A8CCEC8C2069707C0055308C /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */; };
-		A8D0F64620781D1300ABC76F /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0F64520781D1300ABC76F /* RecipeViewController.swift */; };
 		A8EAD775207434E6005BEA3B /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAD774207434E6005BEA3B /* AddIngredientsViewController.swift */; };
 		A8EAD77720745053005BEA3B /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAD77620745053005BEA3B /* IngredientViewController.swift */; };
 		E08C2F00F616FB515900E6D1 /* Pods_MyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */; };
@@ -69,6 +70,8 @@
 		A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEdamam.swift; sourceTree = "<group>"; };
 		A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 		A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRecipe.swift; sourceTree = "<group>"; };
+		A8A5A6CE2092308E002650CF /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeViewController.swift; path = ../../../../../Downloads/RecipeViewController.swift; sourceTree = "<group>"; };
+		A8A5A6D0209230C8002650CF /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A8A8BB232034A57C009ACDC9 /* MyMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A8BB262034A57C009ACDC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A8BB2B2034A57C009ACDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		A8A8BB482034A57C009ACDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ADBBBB2044C94600F3873B /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		A8CCEC8B2069707C0055308C /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroceryListViewController.swift; path = "MyMenu/Grocery List/GroceryListViewController.swift"; sourceTree = SOURCE_ROOT; };
-		A8D0F64520781D1300ABC76F /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A8EAD774207434E6005BEA3B /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		A8EAD77620745053005BEA3B /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B2E9DDD9FAFA515ADC55961C /* Pods_MyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,10 +146,11 @@
 			children = (
 				A880A7882061EB7200ADFF10 /* RecipeEdamam.swift */,
 				A880A78A2061EC8200ADFF10 /* GenerateViewController.swift */,
-				A8D0F64520781D1300ABC76F /* RecipeViewController.swift */,
 				A80C56612075B6D9008797D6 /* RecipeRequirementsViewController.swift */,
+				A8A5A6D0209230C8002650CF /* WebViewController.swift */,
 				A824B1DF207532C1007F7BAE /* RecipeCell.swift */,
 				A824B1DD2075219F007F7BAE /* XPloreViewController.swift */,
+				A8A5A6CE2092308E002650CF /* RecipeViewController.swift */,
 				A880A78C2061EC8D00ADFF10 /* GenerateRecipe.swift */,
 			);
 			path = XPlore;
@@ -559,9 +562,10 @@
 				A8A8BB272034A57C009ACDC9 /* AppDelegate.swift in Sources */,
 				A8ADBBBC2044C94600F3873B /* IngredientsViewController.swift in Sources */,
 				A85E3A1A204F007D0018853E /* FirstStartController.swift in Sources */,
+				A8A5A6CF2092308E002650CF /* RecipeViewController.swift in Sources */,
 				A824B1E0207532C1007F7BAE /* RecipeCell.swift in Sources */,
 				A880A78B2061EC8200ADFF10 /* GenerateViewController.swift in Sources */,
-				A8D0F64620781D1300ABC76F /* RecipeViewController.swift in Sources */,
+				A8A5A6D1209230C8002650CF /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

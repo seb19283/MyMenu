@@ -28,7 +28,7 @@ class RecipeEdamam{
         
         self.image = UIImage()
         
-        if let url = URL(string: sourceURL){
+        if let url = URL(string: sourceURL.replacingOccurrences(of: "http://", with: "https://")){
             self.link = url
         }
         

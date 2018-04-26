@@ -13,6 +13,7 @@ class XPloreViewController: UIViewController, RecipeRequirementViewControllerDel
     func controller(_ controller: RecipeRequirementsViewController, didFindRecipes recipes: [RecipeEdamam]) {
         self.recipes = recipes
         dismiss(animated: true) {
+            UserDefaults.standard.set("", forKey: "Selected Ingredients")
             self.performSegue(withIdentifier: "recipes", sender: self)
         }
         
@@ -24,15 +25,12 @@ class XPloreViewController: UIViewController, RecipeRequirementViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    func goToRecipes() {
-        performSegue(withIdentifier: "recipes", sender: nil)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? GenerateViewController {
             destination.recipes = recipes
         } else if let vc = segue.destination as? RecipeRequirementsViewController {
+            UserDefaults.standard.set("", forKey: "Selected Ingredients")
             vc.delegate = self
         }
     }

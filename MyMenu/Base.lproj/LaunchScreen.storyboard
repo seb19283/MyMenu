@@ -17,13 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edamam Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-FK-sej">
+                                <rect key="frame" x="207" y="619" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="O5E-Eg-Tq2"/>
+                                    <constraint firstAttribute="height" constant="40" id="h2z-kZ-31t"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Detective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1E-j7-KCa">
+                                <rect key="frame" x="33.5" y="303.5" width="308.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-j6-Raz">
+                                <rect key="frame" x="67.5" y="60" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="beG-vK-eTj"/>
+                                    <constraint firstAttribute="width" constant="240" id="bnk-Sn-Aqf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.47843137254901957" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4R9-FK-sej" secondAttribute="bottom" constant="8" id="GPz-vU-lTE"/>
+                            <constraint firstItem="h1E-j7-KCa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Mfd-xH-B7a"/>
+                            <constraint firstItem="h1E-j7-KCa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pdq-xO-9uV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4R9-FK-sej" secondAttribute="trailing" constant="8" id="beV-D0-RIT"/>
+                            <constraint firstItem="1EX-j6-Raz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cg8-fE-BLR"/>
+                            <constraint firstItem="1EX-j6-Raz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="m8V-Au-ULo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppIcon" width="180" height="180"/>
+        <image name="Edamam Logo" width="160" height="40"/>
+    </resources>
 </document>
