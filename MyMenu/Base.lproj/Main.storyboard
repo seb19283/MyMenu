@@ -180,7 +180,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpx-Pr-JT8">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpx-Pr-JT8">
                                 <rect key="frame" x="16" y="699" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -195,7 +195,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.58431372549019611" green="0.7803921568627451" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.58823529411764708" green="0.7803921568627451" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,10 +239,26 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-Dv-Dus">
+                                <rect key="frame" x="162.66666666666666" y="381.66666666666669" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Au3-98-v4Y"/>
+                                    <constraint firstAttribute="height" constant="50" id="BjT-b0-Kf3"/>
+                                </constraints>
+                                <color key="color" red="0.58823529409999997" green="0.78039215689999997" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eW7-Dv-Dus" firstAttribute="centerY" secondItem="bQ7-YA-SKt" secondAttribute="centerY" id="1Dz-9d-r0e"/>
+                            <constraint firstItem="eW7-Dv-Dus" firstAttribute="centerX" secondItem="bQ7-YA-SKt" secondAttribute="centerX" id="nug-cY-NfO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W2h-yV-stj"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="eW7-Dv-Dus" id="IPE-Wk-oVL"/>
+                        <outlet property="webView" destination="x2z-IF-npj" id="kW9-AO-WcN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uss-IL-a33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,15 +313,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-ob-Iaw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-ob-Iaw">
                                 <rect key="frame" x="16" y="149" width="73" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="IDb-Cn-UTK"/>
                                     <constraint firstAttribute="width" constant="73" id="XLo-tq-YiY"/>
                                 </constraints>
-                                <state key="normal" title="Fast">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Fast"/>
                                 <connections>
                                     <action selector="fastButtonClicked:" destination="6qn-PP-LPE" eventType="touchUpInside" id="eqq-kA-Evr"/>
                                 </connections>

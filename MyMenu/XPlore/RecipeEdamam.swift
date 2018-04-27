@@ -17,6 +17,7 @@ class RecipeEdamam{
     var ingredients: [String]
     var yield: Double
     var tags: String
+    var percent: Double?
     //         let recipeObject = Recipe(imageURL: imageURL, title: title, sourceURL: sourceURL, ingredients: ingredients, yield: yield)
     init(imageURL: String, title: String, sourceURL: String, ingredients: [String], yield: Double, tags: String){
         

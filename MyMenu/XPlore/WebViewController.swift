@@ -9,21 +9,16 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate {
+class WebViewController: UIViewController{
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
     
     var websiteLink: URL?
     
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
         if let URL = websiteLink {
             let myRequest = URLRequest(url: URL)
             webView.load(myRequest)
@@ -31,9 +26,12 @@ class WebViewController: UIViewController, WKUIDelegate {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func webViewDidStartLoad(_ : UIWebView){
+        activityIndicatorView.startAnimating()
     }
     
-
+    func webViewDidFinishLoad(_ : UIWebView){
+        activityIndicatorView.stopAnimating()
+    }
+    
 }
