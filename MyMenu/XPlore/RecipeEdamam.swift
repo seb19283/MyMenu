@@ -17,7 +17,8 @@ class RecipeEdamam{
     var ingredients: [String]
     var yield: Double
     var tags: String
-    var percent: Double?
+    var percent: Int?
+    var missingIngredients: [String]?
     //         let recipeObject = Recipe(imageURL: imageURL, title: title, sourceURL: sourceURL, ingredients: ingredients, yield: yield)
     init(imageURL: String, title: String, sourceURL: String, ingredients: [String], yield: Double, tags: String){
         
@@ -34,11 +35,10 @@ class RecipeEdamam{
         }
         
         URLSession.shared.dataTask(with: URL(string: imageURL)!) { (data, response, error) in
-            if let imageData = data {
-                self.image = UIImage(data: imageData)!
+            if let imageData = data, let image = UIImage(data: imageData) {
+                self.image = image
             }
         }.resume()
-        
         
     }
     

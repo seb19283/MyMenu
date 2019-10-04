@@ -40,9 +40,8 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.allowsMultipleSelectionDuringEditing = true
         
         cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonClicked))
-        deleteButton = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(deleteButtonClicked))
+        deleteButton = UIBarButtonItem(title: "Clear All", style: .plain, target: self, action: #selector(deleteButtonClicked))
         deleteButton.tintColor = .red
-        
         
     }
     
@@ -89,16 +88,18 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         
         navigationBar.leftBarButtonItem = cancelButton
         navigationBar.rightBarButtonItem = deleteButton
-        deleteButton.isEnabled = false
         tableView.isEditing = true
         
     }
     
     @objc func deleteButtonClicked() {
-        self.alertMessage("Do you want to add these ingredients to your ingredients?", indexPaths: selectedIndexPaths)
-        selectedIndexPaths.removeAll()
-        deleteButton.title = "Delete"
-        deleteButton.isEnabled = false
+        if deleteButton.title == "Clear All"{
+            self.clearAllAlert()
+        } else {
+            self.alertMessage("Do you want to add these ingredients to your grocery list?", indexPaths: selectedIndexPaths)
+            selectedIndexPaths.removeAll()
+            deleteButton.title = "Clear All"
+        }
         tableView.reloadData()
     }
     
@@ -108,7 +109,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         navigationBar.rightBarButtonItem = addButton
         navigationBar.leftBarButtonItem = editButton
         selectedIndexPaths.removeAll()
-        deleteButton.title = "Delete"
+        deleteButton.title = "Clear All"
         
     }
     
@@ -120,8 +121,8 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         
         selectedIndexPaths.append(indexPath)
         
-        if !deleteButton.isEnabled {
-            deleteButton.isEnabled = true
+        if deleteButton.title == "Clear All" {
+            deleteButton.title = "Delete(1)"
         }
         
         deleteButton.title = "Delete(\(selectedIndexPaths.count))"
@@ -133,8 +134,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         selectedIndexPaths.remove(at: selectedIndexPaths.index(of: indexPath)!)
         
         if selectedIndexPaths.count == 0 {
-            deleteButton.isEnabled = false
-            deleteButton.title = "Delete"
+            deleteButton.title = "Clear All"
         } else {
             deleteButton.title = "Delete(\(selectedIndexPaths.count))"
         }
@@ -168,7 +168,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         let categoryLabel: UILabel = {
             let label = UILabel()
             label.text = categories[section]
-            label.textColor = .black
+            label.textColor = UIColor(r: 60, g: 32, b: 35)
             label.translatesAutoresizingMaskIntoConstraints = false
             label.font = UIFont(name: "Helvetica Neue", size: 16)
             return label
@@ -182,7 +182,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         
         let separatorView: UIView = {
             let view = UIView()
-            view.backgroundColor = UIColor(r: 196, g: 189, b: 185)
+            view.backgroundColor = UIColor(r: 237, g: 213, b: 214)
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
@@ -251,7 +251,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             
         }
         
-        let ingredientsAction = UIContextualAction(style: .normal, title: "Add To Ingredients") { (action, view, handler) in
+        let ingredientsAction = UIContextualAction(style: .normal, title: "Add To Ingredients?") { (action, view, handler) in
             
             let i = self.ingredients[indexPath.section].names[indexPath.row]
             
@@ -309,8 +309,57 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         alert.addAction(YES)
         alert.addAction(NO)
         
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion:{
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        })
         
+    }
+    
+    func clearAllAlert(){
+        let alert = UIAlertController(title: "", message: "Are You Sure?", preferredStyle: UIAlertControllerStyle.alert)
+        let yes = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            self.clearAllAlertSecond()
+        }
+        let no = UIAlertAction(title: "No", style: .default, handler: nil)
+        
+        alert.addAction(yes)
+        alert.addAction(no)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func clearAllAlertSecond(){
+        let alert = UIAlertController(title: "", message: "Add To Ingredients?", preferredStyle: UIAlertControllerStyle.alert)
+        let yes = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            self.ref.child("Test").child("Grocery List").removeValue()
+            
+            for i in 0..<self.categories.count {
+                for j in self.ingredients[i].names{
+                    self.ref.child("Test").child("Ingredients").child(self.categories[i]).child(j).setValue(j)
+                }
+            }
+            
+            self.ingredients.removeAll()
+            self.categories.removeAll()
+            self.tableView.reloadData()
+        }
+        let no = UIAlertAction(title: "No", style: .default) { (action) in
+            self.ref.child("Test").child("Grocery List").removeValue()
+            self.ingredients.removeAll()
+            self.categories.removeAll()
+            self.ingredients.removeAll()
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(yes)
+        alert.addAction(no)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func alertControllerBackgroundTapped(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

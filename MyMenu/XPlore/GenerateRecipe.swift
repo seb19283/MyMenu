@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class GenerateRecipe {
     
-    func getRecipesWithURL(url: String, success: @escaping ([RecipeEdamam]) -> Void) {
+    func getRecipesWithURL(url: String, ingredient: String = "", success1: @escaping ([RecipeEdamam],String) -> Void) {
         
         var recipes = [RecipeEdamam]()
         
@@ -29,7 +29,8 @@ class GenerateRecipe {
                             for label in healthLabels {
                                 tags += "\(label), "
                             }
-                        } else if let dietLabels = recipe.value(forKey: "dietLabels") as? [String]{
+                        }
+                        if let dietLabels = recipe.value(forKey: "dietLabels") as? [String]{
                             for label in dietLabels {
                                 tags += "\(label), "
                             }
@@ -49,7 +50,7 @@ class GenerateRecipe {
                 
             }
             
-            success(recipes)
+            success1(recipes, ingredient)
             
         }.resume()
         

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,27 +15,27 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edamam Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-FK-sej">
-                                <rect key="frame" x="207" y="619" width="160" height="40"/>
+                                <rect key="frame" x="207" y="730" width="160" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="O5E-Eg-Tq2"/>
                                     <constraint firstAttribute="height" constant="40" id="h2z-kZ-31t"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Detective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1E-j7-KCa">
-                                <rect key="frame" x="33.5" y="303.5" width="308.5" height="60"/>
+                                <rect key="frame" x="33.666666666666657" y="376" width="308.33333333333337" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-j6-Raz">
-                                <rect key="frame" x="67.5" y="60" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Icon" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-j6-Raz">
+                                <rect key="frame" x="37.666666666666657" y="84" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="beG-vK-eTj"/>
-                                    <constraint firstAttribute="width" constant="240" id="bnk-Sn-Aqf"/>
+                                    <constraint firstAttribute="height" constant="300" id="beG-vK-eTj"/>
+                                    <constraint firstAttribute="width" constant="300" id="bnk-Sn-Aqf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -57,7 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon" width="180" height="180"/>
+        <image name="App Icon" width="180" height="180"/>
         <image name="Edamam Logo" width="160" height="40"/>
     </resources>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController{
+class WebViewController: UIViewController, WKNavigationDelegate{
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
@@ -19,6 +19,8 @@ class WebViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webView.navigationDelegate = self
+        
         if let URL = websiteLink {
             let myRequest = URLRequest(url: URL)
             webView.load(myRequest)
@@ -26,11 +28,7 @@ class WebViewController: UIViewController{
         
     }
     
-    func webViewDidStartLoad(_ : UIWebView){
-        activityIndicatorView.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(_ : UIWebView){
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicatorView.stopAnimating()
     }
     

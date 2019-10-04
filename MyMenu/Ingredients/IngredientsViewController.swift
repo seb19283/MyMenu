@@ -33,7 +33,6 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = UIColor(r: 150, g: 199, b: 149)
-        tableView.separatorColor = UIColor(r: 157, g: 158, b: 158)
         tableView.tableFooterView = UIView()
         tableView.allowsSelection = false
         tableView.allowsMultipleSelectionDuringEditing = true
@@ -166,9 +165,9 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         let categoryLabel: UILabel = {
             let label = UILabel()
             label.text = categories[section]
-            label.textColor = .black
+            label.textColor = UIColor(r: 60, g: 32, b: 35)
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.font = UIFont(name: "Helvetica Neue", size: 16)
+            label.font = UIFont(name: "HelveticaNeue", size: 16)
             return label
         }()
         
@@ -180,7 +179,7 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         
         let separatorView: UIView = {
             let view = UIView()
-            view.backgroundColor = UIColor(r: 196, g: 189, b: 185)
+            view.backgroundColor = UIColor(r: 237, g: 213, b: 214)
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
@@ -306,8 +305,15 @@ class IngredientsViewController: UIViewController, UITableViewDataSource, UITabl
         alert.addAction(YES)
         alert.addAction(NO)
         
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion:{
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        })
         
+    }
+    
+    @objc func alertControllerBackgroundTapped(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

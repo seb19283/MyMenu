@@ -35,7 +35,7 @@ class GenerateViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         ref = Database.database().reference()
+        ref = Database.database().reference()
         
         tableView.register(RecipeCell.self, forCellReuseIdentifier: "cellID")
         
@@ -76,7 +76,8 @@ class GenerateViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let rec = recipes else {fatalError()}
         
         for r in rec {
-            r.percent = getPercentage(recipeIngredients: r.ingredients, userIngredients: ingredients)
+            r.percent = getPercentage(recipeIngredients: r.ingredients, userIngredients: ingredients).0
+            r.missingIngredients = getPercentage(recipeIngredients: r.ingredients, userIngredients: ingredients).1
         }
         
         recipes = rec.sorted(by: { (r1, r2) -> Bool in
@@ -86,7 +87,7 @@ class GenerateViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.reloadData()
     }
     
-    func getPercentage(recipeIngredients: [String], userIngredients: [[String]]) -> Double {
+    func getPercentage(recipeIngredients: [String], userIngredients: [[String]]) -> (Int,[String]) {
         
         var recipeHardIngredients: [String] = []
         var userIngredientsInRecipe: [String] = []
@@ -125,8 +126,18 @@ class GenerateViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
         
-        return Double(recipeHardIngredients.count)/Double(userIngredientsInRecipe.count)
+        var missingIngredients = [String]()
         
+        for i in recipeHardIngredients{
+            if !userIngredientsInRecipe.contains(i){
+                missingIngredients.append(i)
+            }
+        }
+        
+        var percent = Double(userIngredientsInRecipe.count)/Double(recipeHardIngredients.count)
+        percent*=100
+        percent.round()
+        return (Int(percent), missingIngredients)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -164,7 +175,13 @@ class GenerateViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.backgroundColor = .clear
         cell.titleLabel.text = recipe.title
-        cell.descriptionLabel.text = "Percent: \(recipe.percent!)\nYield: \(recipe.yield) \nDescription: \(recipe.tags)"
+        
+        if let percent = recipe.percent {
+            cell.descriptionLabel.text = "You have \(percent)% of required ingredients\nYield: \(recipe.yield) \nDescription: \(recipe.tags)"
+        } else {
+            cell.descriptionLabel.text = "Percent: 0\nYield: \(recipe.yield) \nDescription: \(recipe.tags)"
+        }
+        
         cell.recipeImageView.image = recipe.image
         
         return cell

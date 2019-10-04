@@ -177,20 +177,23 @@ class RecipeRequirementsViewController: UIViewController, UITableViewDelegate, U
         
         url+="&\(speed)"
         
+        let spinnerView = UIView.init(frame: self.view.bounds)
+        let screenSize: CGRect = UIScreen.main.bounds
+        spinnerView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let myView = SpinnerView(frame: CGRect(x: screenSize.width/2-50, y: screenSize.height/2-50, width: 100, height: 100))
+        spinnerView.addSubview(myView)
+        self.view.addSubview(spinnerView)
         
-        
-        recipeGenerator.getRecipesWithURL(url: url, success: { (recipes) in
-            
+        recipeGenerator.getRecipesWithURL(url: url, success1: { (recipes, _) in
             if recipes.count == 0 {
                 self.alertMessage("No Recipes Available")
+                spinnerView.removeFromSuperview()
             } else {
                 self.delegate?.controller(self, didFindRecipes: recipes)
             }
-            
         })
         
     }
-    
     
     func alertMessage(_ message: String){
         let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.alert)
